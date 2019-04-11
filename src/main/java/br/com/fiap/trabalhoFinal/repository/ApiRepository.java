@@ -8,11 +8,12 @@ import br.com.fiap.trabalhoFinal.dto.Transaction;
 
 public class ApiRepository {
 
-	public ArrayList<Transaction> transactions = new ArrayList<>();
+	private ArrayList<Transaction> transactions = new ArrayList<>();
+	private final long minute = 60000;
 	
 	public boolean save(Transaction transaction) {
 		
-		if (System.currentTimeMillis() - transaction.getTimestamp() <= 60000) {			
+		if (System.currentTimeMillis() - transaction.getTimestamp() <= minute) {			
 			transactions.add(transaction);
 			return true;			
 		}
@@ -27,7 +28,7 @@ public class ApiRepository {
 		ArrayList<Transaction> filterTransactions = 
 				(ArrayList<Transaction>) transactions
 					.stream()
-					.filter(t -> System.currentTimeMillis() - t.getTimestamp() <= 60000)
+					.filter(t -> System.currentTimeMillis() - t.getTimestamp() <= minute)
 					.collect(Collectors.toList());
 		
 		double sum = filterTransactions
@@ -53,7 +54,7 @@ public class ApiRepository {
 				.min()
 				.getAsDouble();
 		
-		int count = filterTransactions.size();
+		long count = filterTransactions.size();
 		
 		statistic.setAvg(avg);
 		statistic.setSum(sum);

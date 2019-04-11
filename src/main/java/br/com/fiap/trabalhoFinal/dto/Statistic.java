@@ -15,7 +15,7 @@ public class Statistic {
 	private double min = 0.0;
 	private double max = 0.0;
 	private double avg = 0.0;
-	private int count = 0;
+	private long count = 0;
 	
 	public double getSum() {
 		return sum;
@@ -49,11 +49,11 @@ public class Statistic {
 		this.avg = avg;
 	}
 	
-	public int getCount() {
+	public long getCount() {
 		return count;
 	}
 	
-	public void setCount(int count) {
+	public void setCount(long count) {
 		this.count = count;
 	}
 }
