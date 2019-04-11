@@ -17,4 +17,16 @@ public class Transaction {
 	public long getTimestamp() {
 		return this.timestamp;
 	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public void setTimestamp(long timestamp) {
+		this.timestamp = timestamp;
+	}
 }
