@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.fiap.trabalhoFinal.dto.Statistic;
 import br.com.fiap.trabalhoFinal.dto.Transaction;
 import br.com.fiap.trabalhoFinal.repository.ApiRepository;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @RestController
 public class ApiController {
 
