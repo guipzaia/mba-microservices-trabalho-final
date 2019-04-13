@@ -1,4 +1,4 @@
-package br.com.fiap.trabalhoFinal;
+package br.com.fiap.trabalhofinal;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,9 +12,9 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import br.com.fiap.trabalhoFinal.controller.ApiController;
-import br.com.fiap.trabalhoFinal.dto.Transaction;
-import br.com.fiap.trabalhoFinal.repository.ApiRepository;
+import br.com.fiap.trabalhofinal.controller.ApiController;
+import br.com.fiap.trabalhofinal.dto.Transaction;
+import br.com.fiap.trabalhofinal.repository.ApiRepository;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest({ApiController.class, ApiRepository.class})

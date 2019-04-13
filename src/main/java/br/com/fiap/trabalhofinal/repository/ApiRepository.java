@@ -1,11 +1,11 @@
-package br.com.fiap.trabalhoFinal.repository;
+package br.com.fiap.trabalhofinal.repository;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
-import br.com.fiap.trabalhoFinal.dto.Statistic;
-import br.com.fiap.trabalhoFinal.dto.Transaction;
+import br.com.fiap.trabalhofinal.dto.Statistic;
+import br.com.fiap.trabalhofinal.dto.Transaction;
 
 public class ApiRepository {
 

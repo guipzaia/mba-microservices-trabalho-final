@@ -1,4 +1,4 @@
-package br.com.fiap.trabalhoFinal.dto;
+package br.com.fiap.trabalhofinal.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

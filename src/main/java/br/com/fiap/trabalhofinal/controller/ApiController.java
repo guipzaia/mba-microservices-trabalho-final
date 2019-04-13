@@ -1,4 +1,4 @@
-package br.com.fiap.trabalhoFinal.controller;
+package br.com.fiap.trabalhofinal.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.fiap.trabalhoFinal.dto.Statistic;
-import br.com.fiap.trabalhoFinal.dto.Transaction;
-import br.com.fiap.trabalhoFinal.repository.ApiRepository;
+import br.com.fiap.trabalhofinal.dto.Statistic;
+import br.com.fiap.trabalhofinal.dto.Transaction;
+import br.com.fiap.trabalhofinal.repository.ApiRepository;
 
 @RestController
 public class ApiController {
