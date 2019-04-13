@@ -13,7 +13,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import br.com.fiap.trabalhofinal.controller.ApiController;
-import br.com.fiap.trabalhofinal.dto.Transaction;
+import br.com.fiap.trabalhofinal.model.Transaction;
 import br.com.fiap.trabalhofinal.repository.ApiRepository;
 
 @RunWith(SpringRunner.class)

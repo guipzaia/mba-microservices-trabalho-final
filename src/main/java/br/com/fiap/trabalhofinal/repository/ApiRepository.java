@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
-import br.com.fiap.trabalhofinal.dto.Statistic;
-import br.com.fiap.trabalhofinal.dto.Transaction;
+import br.com.fiap.trabalhofinal.model.Statistic;
+import br.com.fiap.trabalhofinal.model.Transaction;
 
 public class ApiRepository {
 

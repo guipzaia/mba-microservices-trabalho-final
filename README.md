@@ -19,13 +19,25 @@ mvn spring-boot:run
 ./mvnw install dockerfile:build
 ```
 
-## Executar a aplicação dockerizada 
+## Executar 2 instancias da aplicação em containers
+
+Aplicações serão exeutadas nas portas 8080 e 9090
 
 ```sh
-docker run -p 8000:8000 -t springio/trabalho-final
+docker run -p 8080:8080 -t springio/trabalho-final
+docker run -p 8080:9090 -t springio/trabalho-final
 ```
 
-## API
+## Documentação da API
+
+Acessar o link após subir a aplicação na porta 8080
+
+```url
+http://localhost:8080/swagger-ui.html
+```
+
+
+## Statistic API
 
 ### Transactions
 
