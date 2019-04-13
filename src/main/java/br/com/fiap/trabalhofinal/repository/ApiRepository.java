@@ -2,7 +2,6 @@ package br.com.fiap.trabalhofinal.repository;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
-import java.util.stream.DoubleStream;
 
 import br.com.fiap.trabalhofinal.model.Statistic;
 import br.com.fiap.trabalhofinal.model.Transaction;
@@ -34,16 +33,37 @@ public class ApiRepository {
 					.collect(Collectors.toList());
 		
 		if (filterTransactions.size() > 0) {
-		
-			DoubleStream ds = filterTransactions
-					.stream()
-					.mapToDouble(Transaction::getAmount);
 			
-			statistic.setAvg(ds.average().getAsDouble());
-			statistic.setSum(ds.sum());
-			statistic.setMax(ds.max().getAsDouble());
-			statistic.setMin(ds.min().getAsDouble());
-			statistic.setCount(ds.count());
+			double avg = filterTransactions
+					.stream()
+					.mapToDouble(Transaction::getAmount)
+					.average().getAsDouble();
+			
+			double sum = filterTransactions
+					.stream()
+					.mapToDouble(Transaction::getAmount)
+					.sum();
+			
+			double max = filterTransactions
+					.stream()
+					.mapToDouble(Transaction::getAmount)
+					.max().getAsDouble();
+			
+			double min = filterTransactions
+					.stream()
+					.mapToDouble(Transaction::getAmount)
+					.min().getAsDouble();
+			
+			long count = filterTransactions
+					.stream()
+					.mapToDouble(Transaction::getAmount)
+					.count();
+			
+			statistic.setAvg(avg);
+			statistic.setSum(sum);
+			statistic.setMax(max);
+			statistic.setMin(min);
+			statistic.setCount(count);
 		}
 		
 		return statistic;
